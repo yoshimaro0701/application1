@@ -1,0 +1,50 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(151, 214, 250);
+  padding-top: 110px;
+  
+  .contents {
+    width: 70%;
+    height: calc(100vh - 110px);
+    overflow: scroll;
+    margin: auto;
+    
+    .content {
+      margin: 2em 0;
+      background: #f1f1f1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+
+      .upper-content {
+        display: flex;
+        font-size: 1.2em;
+        background: #5fc2f5;
+        padding: 4px;
+        color: #FFF;
+        letter-spacing: 0.05em;
+
+        &__user-name {
+          line-height: 2em;
+          color: #ffffff;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          float: right;
+          padding-left: 20px;
+          font-size: 12px;
+          line-height: 30px;
+        }
+      }
+
+      .lower-content {
+        padding: 15px 20px;
+        margin: 0;
+
+        &__text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
