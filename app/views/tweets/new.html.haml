@@ -1,0 +1,17 @@
+%header.header
+  .left-header
+    %h1.left-header__title
+      .center-outer
+        .center-inner
+          .bubbles
+            %h1 Switter
+.wrapper
+  .post-contents
+    .post-content
+      = form_tag('/tweets', method: 'post', multipart: true) do
+        %h3
+          投稿する
+        %input{:name => "name", :placeholder => "Nickname", :type => "text"}/
+        %input{:name => "image", :placeholder => "Image Url", :type => "text", :autofocus => "true"}/
+        %textarea{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}
+        %input{:type => "submit", :value => "SENT"}/

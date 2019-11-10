@@ -7,35 +7,4 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header.header
-      .left-header
-        %h1.left-header__title
-          .center-outer
-            .center-inner
-              .bubbles
-                %h1 Switter
-      .right-header
-        .right-header__login-btn
-          %a.btn-circle-fishy{:href => "#"} Login
-        .right-header__registration-btn
-          %a.btn-circle-fishy{:href => "/users/sign_up/"} Sign up
-    .app
-      .contents
-        .content
-          .upper-content
-            .upper-content__user-name
-              ユーザー名
-            .upper-content__date
-              2019/1/1
-          .lower-content
-            .lower-content__text
-              こんにちは
-        .content
-          .upper-content
-            .upper-content__user-name
-              ユーザー名
-            .upper-content__date
-              2019/1/1
-          .lower-content
-            .lower-content__text
-              こんにちは
+    = yield

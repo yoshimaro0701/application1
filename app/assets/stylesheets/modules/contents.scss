@@ -1,11 +1,11 @@
 .app {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(151, 214, 250);
   padding-top: 110px;
   
   .contents {
-    width: 70%;
+    width: 80%;
     height: calc(100vh - 110px);
     overflow: scroll;
     margin: auto;
@@ -30,21 +30,31 @@
           font-weight: bold;
         }
         &__date {
-          float: right;
           padding-left: 20px;
           font-size: 12px;
           line-height: 30px;
         }
+        &__change {
+          display: inline-flex;
+          margin-left: 200px;
+          a {
+            padding-right: 50px;
+          }
+        }
       }
-
+    }
       .lower-content {
         padding: 15px 20px;
         margin: 0;
+        height: 100%;
+        width: 100%;
 
         &__text {
           font-size: 16px;
         }
+        &__image {
+          margin: 10px;
+        }
       }
     }
   }
-}

@@ -1,3 +1,44 @@
-.contents.row
-  - @tweets.each do |tweet|
-    %p= tweet.text
+%header.header
+  .left-header
+    %h1.left-header__title
+      .center-outer
+        .center-inner
+          .bubbles
+            %h1 Switter
+  .right-header
+    - if user_signed_in?
+      .right-header__info
+        = current_user.name
+      .right-header__post-btn
+        %a.btn-circle-fishy{:href => "/tweets/new/"} Post
+      .right-header__logout-btn
+        = link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn-circle-fishy'
+    - else
+      .right-header__login-btn
+        %a.btn-circle-fishy{:href => "/users/sign_in/"} Login
+      .right-header__registration-btn
+        %a.btn-circle-fishy{:href => "/users/sign_up/"} Sign up
+.app
+  .contents
+    - @tweets.each do |tweet|
+      .content
+        .upper-content
+          .upper-content__user-name
+            = tweet.user.name
+          .upper-content__date
+            = tweet.created_at.to_s(:datetime)
+          - if user_signed_in?
+            .upper-content__change
+              .upper-content__change-edit
+                = link_to '編集', "/tweets/#{tweet.id}/edit", method: :get
+              .upper-content__change-delete
+                = link_to '削除', "/tweets/#{tweet.id}", method: :delete
+        .lower-content
+          .lower-content__text
+            = tweet.text
+        - if tweet.image.present?
+          .lower-content__image
+            = image_tag tweet.image, class: 'lower-content__image'
+.nav
+  .pagenation
+    = paginate(@tweets)

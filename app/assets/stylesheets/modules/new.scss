@@ -1,0 +1,43 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(151, 214, 250);
+  padding-top: 110px;
+  
+  .post-contents {
+    width: 100%;
+    height: calc(100vh - 110px);
+    overflow: scroll;
+    max-width: 660px;
+    margin: auto;
+
+    .post-content {
+      box-shadow: 0 0 10px rgba gray;
+      background-color: rgb(151, 214, 250);
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      
+      h3 {
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
+        color: gray;
+        padding: 20px 0 20px;
+      }
+      input, textarea {
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin: 5px 0 15px;
+        padding: 10px;
+      }
+      input[type="submit"] {
+        background-color: skyblue;
+        border-radius: 20px;
+        color: white;
+        font-size: 18px;
+      }
+    }
+  }
+}

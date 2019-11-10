@@ -68,8 +68,11 @@
     line-height: 40px;
     padding: 10px;
       
+    &__info {
+      margin: 20px;
+    }
 
-    &__login-btn {
+    &__login-btn, &__registration-btn, &__post-btn, &__logout-btn {
       text-decoration: none;
       color: #38AEF0;
       padding-right: 20px;
@@ -93,30 +96,10 @@
         transform: rotate(10deg);
       }
     }
-    &__registration-btn {
-      text-decoration: none;
-      color: #38AEF0;
-
-      .btn-circle-fishy {
-        display: inline-block;
-        text-decoration: none;
-        color: #FFF;
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
-        border-radius: 50%;
-        text-align: center;
-        overflow: hidden;
-        background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);
-        transition: .4s;
-      }
-        
-      .btn-circle-fishy:hover {
-        -webkit-transform: rotate(10deg);
-        transform: rotate(10deg);
-      }
-    }
   }
+}
+.nav {
+  background-color: rgb(151, 214, 250);
 }
 }
 
